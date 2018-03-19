@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/id_paper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text=""
+            android:textColor="@color/hoverColor"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/invisibleID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textpaper"
+            android:layout_alignEnd="@+id/Score"
+            android:layout_marginBottom="12dp"
+            android:text="Invisible ID"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/question_paper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/id_paper"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="කරුණාකර මදක් රඳී සිටින්න..."
+            android:textColor="@color/hoverColor"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/question_paper">
+
+            <RadioButton
+                android:id="@+id/choice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <RadioButton
+                android:id="@+id/choice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <RadioButton
+                android:id="@+id/choice3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <RadioButton
+                android:id="@+id/choice4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textpaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="ප්‍රශ්න පත්‍රය"
+            android:textColor="@color/hoverColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/Score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/next_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="71dp"
+            android:text="ලකුණු"
+            android:textColor="@color/hoverColor"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/correct_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textpaper"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:text="නිවැරදි පිළිතූර "
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/correct_answer_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textpaper"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:text="නිවැරදි පිළිතූර "
+            android:textColor="@color/colorAccent"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/you_are_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textpaper"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="19dp"
+            android:text="ඔබේ පිළිතුර නිවැරදියි"
+            android:textColor="@color/green"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/hoverColor"
+            android:text="ඇතුළු වන්න"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/you_are_correct" />
+
+        <Button
+            android:id="@+id/check_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/hoverColor"
+            android:text="පරීක්ෂා කරන්න"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBaseline="@+id/next_btn" />
+
+        <Button
+            android:id="@+id/previous_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/next_btn"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@color/hoverColor"
+            android:text="පෙර ප්‍රශ්නය"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
